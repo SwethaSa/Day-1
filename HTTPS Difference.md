@@ -29,16 +29,15 @@ HTTP/1.1 (circa 1997)
   3. If one request stops, the rest wait in line—and headers are resent in full each time.
 
 HTTP/2 (since 2015)
-  1. Everything is chopped into small binary frames for speed.  
-  2. Multiple requests and responses flow in parallel over one TCP connection (multiplexing).  
+  1. Everything is minimized into small binary frames for speed.  
+  2. Multiple requests and responses flow in parallel over one TCP connection.  
   3. Headers are compressed with HPACK, so you don’t keep sending the same data.  
-  4. Server Push lets your server say, “Hey, I know you’ll want this CSS and JS next—here you go,” cutting out extra round trips.  
-  5. You can also assign priorities, so your critical content (like fonts or above-the-fold images) loads first.
+  4. We can also assign priorities, so your critical content (like fonts or above-the-fold images) loads first.
 
 
 ### Why HTTP/2
 
 => Pages Load Faster: fewer handshakes, less waiting, smarter delivery.  
 => Bandwidth Savings: header compression and reduced duplicate data.  
-=> Smoother User Experience: no more “waterfall” delays when one request stalls.  
+=> Smoother User Experience: no delays when one request stops.  
 => Future-Proof: major CDNs, browsers, and servers support it—so your site keeps up.
